@@ -1,6 +1,6 @@
 import FederatedActions from "../../federatedComponents/actions";
 import FederatedMain from "../../federatedComponents/main";
-import FederatedWrapper from "../../federatedComponents/wrapper";
+import FederatedWrapper from "../../components/wrapper";
 
 export default function Home() {
   return <FederatedWrapper>

@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import Loader from '../../components/loader';
-import ErrorBoundary from '../../components/errorBoundary';
+import Loader from '../loader';
+import ErrorBoundary from '../errorBoundary';
 
 export default function FederatedWrapper({ children }) {
     return <ErrorBoundary>
