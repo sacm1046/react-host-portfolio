@@ -1,12 +1,6 @@
-import { lazy, Suspense } from 'react';
-import Loader from '../../components/loader';
-import ErrorBoundary from '../../components/errorBoundary';
+import { lazy } from 'react';
 const RemoteMain = lazy(() => import('remoteApp/Main'));
 
 export default function FederatedMain() {
-    return <ErrorBoundary>
-        <Suspense fallback={<Loader />}>
-            <RemoteMain />
-        </Suspense>
-    </ErrorBoundary>
+    return <RemoteMain />
 }
