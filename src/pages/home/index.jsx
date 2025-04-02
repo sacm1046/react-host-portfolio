@@ -2,8 +2,9 @@ import { useState } from "react";
 import FederatedActions from "../../federatedComponents/actions";
 import FederatedMain from "../../federatedComponents/main";
 import FederatedWrapper from "../../components/wrapper";
-import "./index.scss";
 import FederatedList from "../../federatedComponents/list";
+import FederatedComments from "../../federatedComponents/comments";
+import "./index.scss";
 
 export default function Home() {
   const [title, setTitle] = useState("");
@@ -24,6 +25,11 @@ export default function Home() {
     <div className="home__section">
       <FederatedWrapper>
         <FederatedList />
+      </FederatedWrapper>
+    </div>
+    <div className="home__section">
+      <FederatedWrapper>
+        <FederatedComments />
       </FederatedWrapper>
     </div>
   </div>
