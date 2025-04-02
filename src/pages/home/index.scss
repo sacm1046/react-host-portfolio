@@ -8,6 +8,13 @@
     padding: 0 100px;
   }
 
+  &__input {
+    width: 600px;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+  }
+
   &__section {
     width: 100%;
     border: 1px solid grey;
