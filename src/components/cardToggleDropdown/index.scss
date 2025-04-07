@@ -10,10 +10,8 @@
     background-color: $color-primary;
     color: $color-white;
     border: none;
-    border-radius: $border-radius;
     cursor: pointer;
     font-size: $font-size-base;
-    box-shadow: $box-shadow;
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -27,7 +25,6 @@
     left: 0;
     background-color: $color-white;
     border: 1px solid $color-border;
-    border-radius: $border-radius;
     padding: $spacing-sm;
     margin-top: $spacing-xs;
     box-shadow: $box-shadow-hover;

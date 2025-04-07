@@ -90,10 +90,23 @@ export default function Home() {
     []
   ]);
 
+  const [isEditing, setIsEditing] = useState(false);
+
   return (
-    <div className="layout">
-      <CardToggleDropdown cards={availableCards} rows={rows} onRowsChange={setRows} />
-      <GridBoard rows={rows} onRowsChange={setRows}/>
+    <div className="home__container">
+      <div className="home__actions">
+        <CardToggleDropdown cards={availableCards} rows={rows} onRowsChange={setRows} />
+        {
+          rows[0]?.length ? <button
+            className="home__button"
+            onClick={() => setIsEditing(!isEditing)}
+          >
+            {isEditing ? 'Desactivar' : 'Activar'} Edición
+          </button> : null
+        }
+
+      </div>
+      <GridBoard rows={rows} onRowsChange={setRows} editMode={isEditing} />
     </div>
   );
 }

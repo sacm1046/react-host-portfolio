@@ -1,10 +1,33 @@
+@use 'sass:color';
+@import "../../styles/variables";
+
 .home {
   &__container {
-    margin-top: 40px;
-    padding: 0 100px;
+    width: 1200px;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: $spacing-sm $spacing-md;
+    background-color: $color-primary;
+    color: $color-white;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-base;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -10%);
+    }
   }
 
   &__title {
