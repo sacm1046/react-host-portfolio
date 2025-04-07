@@ -79,24 +79,27 @@ export default function Home() {
   //     }
   //   </div> */}
   // </div>
-  const [title, setTitle] = useState("");
-  const main = <FederatedWrapper><FederatedMain title={title} /></FederatedWrapper>
-  const actions = <FederatedWrapper><FederatedActions /></FederatedWrapper>
-  const list = <FederatedWrapper><FederatedList /></FederatedWrapper>
-  const comments = <FederatedWrapper><FederatedComments /></FederatedWrapper>
+  const [title, setTitle] = useState("Title");
+  const render = {
+    main: <FederatedWrapper><FederatedMain title={title} /></FederatedWrapper>,
+    actions: <FederatedWrapper><FederatedActions /></FederatedWrapper>,
+    list: <FederatedWrapper><FederatedList /></FederatedWrapper>,
+    comments: <FederatedWrapper><FederatedComments /></FederatedWrapper>
+  }
 
   const availableCards = {
-    note: { title: 'Principal', render: main },
-    stats: { title: 'Acción', render: actions },
-    list: { title: 'Lista', render: list },
-    comments: { title: 'Comentarios', render: comments }
+    main: { title: 'Principal', render: render.main, key: 'main' },
+    actions: { title: 'Acción', render: render.actions, key: 'actions' },
+    list: { title: 'Lista', render: render.list, key: 'list' },
+    comments: { title: 'Comentarios', render: render.comments, key: 'comments' },
   };
 
-  const [rows, setRows] = useState([
-    []
-  ]);
-
+  const [rows, setRows] = useState([[]]);
   const [isEditing, setIsEditing] = useState(false);
+
+  // useEffect(() => {
+  //   console.log(rows)
+  // }, [rows]);
 
   return (
     <div className="home__container">

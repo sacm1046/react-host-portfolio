@@ -12,7 +12,6 @@ function CardToggleDropdown({ cards, rows, onRowsChange }) {
 
   const handleToggle = (key, checked) => {
     const updated = [...rows];
-
     if (!checked) {
       const filtered = updated.map(row => row.filter(card => card.id !== key));
       onRowsChange(filtered);
@@ -20,6 +19,7 @@ function CardToggleDropdown({ cards, rows, onRowsChange }) {
       const newCard = {
         id: key,
         render: cards[key].render,
+        key: cards[key].key,
       };
       if (updated.length === 0) updated.push([]);
       updated[0] = [newCard, ...updated[0]];

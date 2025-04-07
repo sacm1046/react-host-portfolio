@@ -44,11 +44,11 @@
     }
 
     &-header {
+      padding: 5px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: $spacing-xs;
-      margin-bottom: $spacing-sm;
       font-size: $font-size-sm;
       color: $color-muted;
     }
