@@ -9,12 +9,13 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    padding: $spacing-md;
+    padding: 10px;
+    border-top: 2px dotted $color-border;
+    border-bottom: 2px dotted $color-border;
     background-color: $color-white;
     min-height: 120px;
     transition: background-color 0.25s ease;
     position: relative;
-    box-shadow: $box-shadow;
   }
 
   &__card {
@@ -24,7 +25,6 @@
     transition: transform 0.25s ease;
     background-color: $color-white;
     border: 1px solid $color-border;
-    padding: $spacing-md;
     margin-right: $spacing-md;
     flex: 1 1 0;
 
@@ -95,7 +95,6 @@
     &-content {
       font-size: $font-size-base;
       color: $color-text;
-      padding-right: $spacing-lg;
     }
   }
 

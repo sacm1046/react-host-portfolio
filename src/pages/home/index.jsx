@@ -79,11 +79,17 @@ export default function Home() {
   //     }
   //   </div> */}
   // </div>
+  const [title, setTitle] = useState("");
+  const main = <FederatedWrapper><FederatedMain title={title} /></FederatedWrapper>
+  const actions = <FederatedWrapper><FederatedActions /></FederatedWrapper>
+  const list = <FederatedWrapper><FederatedList /></FederatedWrapper>
+  const comments = <FederatedWrapper><FederatedComments /></FederatedWrapper>
 
   const availableCards = {
-    note: { title: 'Nota', render: <div className="card-content">📝 Nota</div> },
-    stats: { title: 'Estadística', render: <div className="card-content">📈 Estadística</div> },
-    graph: { title: 'Gráfico', render: <div className="card-content">📊 Gráfico</div> }
+    note: { title: 'Principal', render: main },
+    stats: { title: 'Acción', render: actions },
+    list: { title: 'Lista', render: list },
+    comments: { title: 'Comentarios', render: comments }
   };
 
   const [rows, setRows] = useState([
